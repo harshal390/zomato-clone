@@ -7,7 +7,14 @@ import collection6 from "../assets/Collections/6.avif";
 import collection7 from "../assets/Collections/7.avif";
 import collection8 from "../assets/Collections/8.avif";
 
-const collectionApi = [
+interface Collection {
+  id: number;
+  title: string;
+  places: string;
+  img: string;
+}
+
+const collectionApi: Collection[] = [
   {
     id: 1,
     title: "Newly Opened Restaurants",

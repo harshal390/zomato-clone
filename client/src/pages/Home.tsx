@@ -7,6 +7,8 @@ import orderOnline from '../assets/orderonline.avif';
 import Collections from '../components/Collections.js';
 import PopularLocalitiesGrid from '../components/PopularLocalitiesGrid.js';
 import GetZomatoApp from '../components/GetZomatoApp.js';
+import ExploreOptionNearMe from '../components/ExploreOptionNearMe.js';
+import Footer from '@/components/Footer.js';
 
 const Home = () => {
     return (
@@ -18,14 +20,20 @@ const Home = () => {
                 <Header />
                 <Hero />
                 <div className="flex items-center gap-5 justify-between">
-                    <Card img={orderOnline} title={`Order Online`} desc={`Stay home and order to your doorstep`} />
-                    <Card img={dining} title={`Dining`} desc={`View the city's favourite dining venues`} />
+                    <Card img={orderOnline} title={`Order Online`} desc={`Stay home and order to your doorstep`} link='dine-out'/>
+                    <Card img={dining} title={`Dining`} desc={`View the city's favourite dining venues`} link='delivery'/>
                 </div>
                 <Collections />
                 <PopularLocalitiesGrid />
             </div>
             <div className="bg-light-pink my-10">
                 <GetZomatoApp />
+            </div>
+            <div className="max-w flex flex-col gap-10">
+                <ExploreOptionNearMe />
+            </div>
+            <div className="bg-light-pink my-10">
+                <Footer />
             </div>
         </div>
     )
