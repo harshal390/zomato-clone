@@ -40,6 +40,16 @@
     .color-red {
         color: rgb(224, 53, 70)
     }
+
+    .flat-percentage-off {
+        background: linear-gradient(90deg,
+                rgb(17, 85, 203) 0%,
+                rgb(83, 140, 238) 25%,
+                rgb(17, 85, 203) 50%,
+                rgba(17, 85, 203, 0.8) 80%,
+                rgba(17, 85, 203, 0) 100%)
+    }
+
 }
 
 body {

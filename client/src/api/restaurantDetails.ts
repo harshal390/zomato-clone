@@ -1,4 +1,4 @@
-interface RESTAURANTS {
+interface RESTAURANTDETAILS {
   id: number;
   gallery: {
     food: string[];
@@ -50,6 +50,6 @@ interface RESTAURANTS {
   flatPercentage: number;
 }
 
-const Restaurants: RESTAURANTS[] = [];
+const RestaurantDetails: RESTAURANTDETAILS[] = [];
 
-export default Restaurants;
+export default RestaurantDetails;

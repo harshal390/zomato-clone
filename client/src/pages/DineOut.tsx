@@ -6,6 +6,11 @@ import DiningOutImage from "@/assets/dining-out.avif";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Collections from "@/components/Collections";
+import { IoFilterOutline } from "react-icons/io5";
+import getUpTo50Off from "@/assets/getUpTo50_Off.avif"
+import Restaurants from "@/api/restaurant";
+import RestaurantCard from "@/components/RestaurantCard";
+import ExploreOptionNearMe from "@/components/ExploreOptionNearMe";
 
 const DineOut = () => {
     const navigate = useNavigate();
@@ -42,6 +47,32 @@ const DineOut = () => {
                 <div className="max-w my-10">
                     <Collections />
                 </div>
+            </div>
+            <div className="max-w flex flex-col gap-5 py-5">
+                <div className="flex items-center gap-5 text-gray-500">
+                    <button className="flex items-center gap-2 p-2 border rounded-lg"><IoFilterOutline />Filters</button>
+                    <button className="flex items-center gap-2 p-2 border rounded-lg">Offers</button>
+                    <button className="flex items-center gap-2 p-2 border rounded-lg">Rating: 4.0+</button>
+                    <button className="flex items-center gap-2 p-2 border rounded-lg">Pet Friendly</button>
+                    <button className="flex items-center gap-2 p-2 border rounded-lg">Outdoor Seating</button>
+                    <button className="flex items-center gap-2 p-2 border rounded-lg">Open Now</button>
+                </div>
+                <div>
+                    <img src={getUpTo50Off} alt={getUpTo50Off} className="w-[1100px] h-[252px] cursor-pointer rounded-lg" />
+                </div>
+                <div className="flex flex-col gap-5">
+                    <h1 className="heading">Trending dining out restaurants in Ahmedabad.</h1>
+
+                    <div className="grid grid-cols-3 gap-5 justify-between">
+                        {
+                            Restaurants.map((restaurant) => {
+                                return <RestaurantCard key={restaurant.id} {...restaurant} />
+                            })
+                        }
+                    </div>
+                </div>
+                <ExploreOptionNearMe />
+                
             </div>
             <div className="bg-light-pink my-10">
                 <Footer />
