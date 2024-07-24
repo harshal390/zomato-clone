@@ -24,7 +24,7 @@ const DineOut = () => {
     };
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-5 relative">
             <Header2></Header2>
             <div className="max-w flex flex-col gap-5">
                 <BreadCrumb />
