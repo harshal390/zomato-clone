@@ -50,6 +50,15 @@
                 rgba(17, 85, 203, 0) 100%)
     }
 
+    .input-color {
+        color: #009999;
+    }
+
+    .input-border {
+        border: 1px solid #009999;
+        outline: none;
+    }
+
 }
 
 body {

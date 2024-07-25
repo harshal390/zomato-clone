@@ -4,6 +4,7 @@ import LocationContextProvider from "./contexts/locationContext";
 import Collection from "./pages/Collection";
 import DineOut from "./pages/DineOut";
 import Delivery from "./pages/Delivery";
+import AuthDialogContextProvider from "./contexts/AuthDialogContext";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -52,7 +53,9 @@ export default function App() {
   ])
   return (
     <LocationContextProvider>
-      <RouterProvider router={router} />
+      <AuthDialogContextProvider>
+        <RouterProvider router={router} />
+      </AuthDialogContextProvider>
     </LocationContextProvider>
   )
 }

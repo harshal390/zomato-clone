@@ -18,7 +18,7 @@ const GetZomatoApp = () => {
                     <RadioField name="inputField" id="email" value="email" />
                 </div>
                 <div className="flex items-center gap-5">
-                    <TextFiled name="email" id="email" placeholder="email" /><button className="bg-red px-10 py-3 w-fit  text-white rounded-xl">Share App Link</button>
+                    <TextFiled name="email" id="email" placeholder="email" className=""/><button className="bg-red px-10 py-3 w-fit  text-white rounded-xl">Share App Link</button>
                 </div>
                 <div className="text-sm text-gray-700">Download app from</div>
                 <div className="flex items-center gap-5">
